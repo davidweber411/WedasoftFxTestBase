@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.wedasoft.wedasoftFxTestBase.shared.Scene1Controller">
+    <center>
+        <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="scene1Label" text="This is scene1.fxml"/>
+                <Separator prefWidth="200.0"/>
+                <Button fx:id="switchToScene2FxmlButton" mnemonicParsing="false"
+                        onAction="#onSwitchToScene2FxmlButtonClick" text="Switch to scene2.fxml"/>
+                <Separator prefWidth="200.0"/>
+                <Label text="Parameter value: n/a"/>
+                <TextField fx:id="passedParameterTf"/>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>
