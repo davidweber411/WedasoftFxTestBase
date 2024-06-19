@@ -1,18 +1,20 @@
-# Description
+### Description
 
-A library which enables you to integrate JavaFX in your tests the easy way.
+A library that simplifies the integration of JavaFX into your tests.
 
-Run unit tests that require JavaFX components with ease, just by extending your test class with one single class.
+Effortlessly run unit tests requiring JavaFX components by extending your test class with a single class.
 
-No more annoying errors like "Toolkit not found", "Toolkit already initialized","Location is not set" or "Not on FX
-application thread" during testing!
+Eliminate common errors such as "Toolkit not found," "Toolkit already initialized," "Location is not set," and "Not on
+FX application thread" during testing.
 
-# Requirements
+### Requirements
 
-This Java library was built by using JDK 17.<br>
-Please make sure that your project is using at least JDK 17 too.
+| Technology | Version |
+|------------|---------|
+| Java       | 17      |
+| JavaFX     | 17.0.8  |
 
-# Dependencies to add
+### Dependencies to add
 
 ##### Maven
 
@@ -32,16 +34,16 @@ Please make sure that your project is using at least JDK 17 too.
       implementation("com.wedasoft:wedasoftfxtestbase:1.0.0")
     }
 
-# Testing suite
+### Documentation
 
-### Step 1: Prepare the test class(es)
+##### Step 1: Prepare the test classes
 
 Extend your wished test classes with the class <code>WedasoftFxTestBase</code>. That's it.
 
     class UnitTests extends WedasoftFxTestBase { 
     }
 
-### Step 2: Write a unit test
+##### Step 2: Write a unit test
 
 1. Simply write a standard unit test method in your test class.
 2. To run code on the JavaFX thread, just invoke <code>runOnJavaFxThreadAndJoin()</code> and pass the code.<br>
@@ -62,7 +64,7 @@ JUnit will not recognize failed assertions in the JavaFX thread.
         assertEquals("buttonlabel", button.getText());
     }
 
-### Example test class 1
+##### Example test class 1
 
     public class UnitTests1 extends WedasoftFxTestBase {
    
@@ -97,7 +99,7 @@ JUnit will not recognize failed assertions in the JavaFX thread.
 
 }
 
-### Example test class 2
+##### Example test class 2
 
     import javafx.geometry.Dimension2D;
     import javafx.scene.control.Button;
